@@ -23,7 +23,6 @@ provider "aws" {
 resource "aws_key_pair" "main" {
   key_name   = "${var.project_name}-key"
 
-  user_data_replace_on_change = true
   public_key = var.ssh_public_key
 }
 
