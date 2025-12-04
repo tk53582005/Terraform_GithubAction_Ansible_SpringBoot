@@ -5,7 +5,7 @@ on:
     branches: [ main, "feature/*" ]
     types: [ opened, synchronize, reopened ]
   push:
-    branches: [ main, "feature/*" ]
+    branches: [ main, "feature/*", "test/deploy-check" ]
 
 env:
   AWS_REGION: ${{ vars.AWS_REGION }}
