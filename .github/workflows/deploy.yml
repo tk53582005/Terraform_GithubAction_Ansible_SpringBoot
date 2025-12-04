@@ -116,6 +116,7 @@ jobs:
             -detailed-exitcode || echo "exitcode=$?" >> $GITHUB_OUTPUT
       
       - name: Generate Plan Summary
+        if: always()
         run: |
           cd terraform
           terraform show -no-color tfplan > plan.txt
