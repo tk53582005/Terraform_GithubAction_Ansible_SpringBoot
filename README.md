@@ -29,6 +29,10 @@ Terraform のリモートステートを使用するため、事前に以下を 
 
 - `MY_IP`：作業端末のグローバルIP（CIDR）
 
+**my_ip の指定方法：**
+- CI/CD（GitHub Actions）: リポジトリ Variables の `MY_IP` から自動取得
+- ローカル実行: `-var="my_ip=YOUR_IP/32"` で指定
+
 ### 3-3. セキュリティグループ
 
 Terraform の egress は外部パッケージ取得や Ansible 動作のために 0.0.0.0/0 を許可
