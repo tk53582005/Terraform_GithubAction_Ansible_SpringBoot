@@ -75,8 +75,9 @@ resource "aws_instance" "web" {
   user_data = <<-EOF
               #!/bin/bash
               dnf update -y
-              dnf install -y python3 python3-pip
-              alternatives --set python /usr/bin/python3
+              dnf install -y python3.11 python3.11-pip
+              alternatives --set python /usr/bin/python3.11
+              alternatives --set python3 /usr/bin/python3.11
               EOF
 
   tags = {
