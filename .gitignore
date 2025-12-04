@@ -1,0 +1,36 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# Maven
+spring-boot-app/target/
+spring-boot-app/pom.xml.tag
+spring-boot-app/pom.xml.releaseBackup
+spring-boot-app/pom.xml.versionsBackup
+spring-boot-app/pom.xml.next
+
+# Ansible
+ansible/inventory
+ansible/*.retry
+
+# SSH
+*.pem
+*.key
+id_rsa*
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
