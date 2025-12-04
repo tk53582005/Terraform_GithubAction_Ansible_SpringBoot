@@ -17,7 +17,7 @@ variable "environment" {
 variable "ami_id" {
   description = "Amazon Linux 2023 AMI ID"
   type        = string
-  default     = "ami-0dafcef159a1fc745"
+  default     = "ami-0b4a1602197908813"
 }
 
 variable "instance_type" {
