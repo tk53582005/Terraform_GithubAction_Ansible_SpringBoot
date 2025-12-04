@@ -22,6 +22,8 @@ provider "aws" {
 
 resource "aws_key_pair" "main" {
   key_name   = "${var.project_name}-key"
+
+  user_data_replace_on_change = true
   public_key = var.ssh_public_key
 }
 
@@ -62,6 +64,8 @@ resource "aws_instance" "web" {
   ami           = var.ami_id
   instance_type = var.instance_type
   key_name      = aws_key_pair.main.key_name
+
+  user_data_replace_on_change = true
 
   vpc_security_group_ids = [aws_security_group.web.id]
 
